@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Drawing App</title>
+    <!-- Main Template CSS File -->
+    <link rel="stylesheet" href="css/drawing.css" />
+    <!-- Render All Elements Normally -->
+    <link rel="stylesheet" href="css/normalize.css" />
+    <!-- Font Awesome Library -->
+    <link rel="stylesheet" href="fontawesome-free-6.1.0-web/css/all.min.css" />
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+  </head>
+  <body>
+    <div class="container">
+      <section class="tools-board">
+        <!--Shapes-->
+        <div class="row">
+          <lable class="title">Shapes</lable>
+          <ul class="options">
+            <li class="option tool" id="rectangle">
+              <i class="fa-duotone fa-rectangle"></i>
+              <span>Rectangle</span>
+            </li>
+            <li class="option tool" id="circle">
+              <i class="fa-duotone fa-circle"></i>
+              <span>Circle</span>
+            </li>
+            <li class="option tool" id="triangle">
+              <i class="fa-duotone fa-triangle"></i>
+              <span>Triangle</span>
+            </li>
+            <li class="option">
+              <input type="checkbox" id="fill-color" />
+              <label for="">Fill color</label>
+            </li>
+          </ul>
+        </div>
+        <!--Options-->
+        <div class="row">
+          <lable class="title">Options</lable>
+          <ul class="options">
+            <li class="option active tool" id="brush">
+              <i class="fa-duotone fa-paintbrush"></i>
+              <span>Brush</span>
+            </li>
+            <li class="option tool" id="eraser">
+              <i class="fa-duotone fa-eraser"></i>
+              <span>Eraser</span>
+            </li>
+            <li class="option">
+              <input type="range" id="size-slider" min="1" max="30" value="5" />
+            </li>
+          </ul>
+        </div>
+        <!--Colors-->
+        <div class="row colors">
+          <lable class="title">Colors</lable>
+          <ul class="options">
+            <li class="option"></li>
+            <li class="option selected"></li>
+            <li class="option"></li>
+            <li class="option"></li>
+            <li class="option">
+              <input type="color" id="color-picker" value="#b84af7" />
+            </li>
+          </ul>
+        </div>
+        <!--buttons-->
+        <div class="row buttons">
+          <button class="clear-canvas">Clear Canvas</button>
+          <button class="save-img">Save As Image</button>
+        </div>
+      </section>
+      <section class="drawing-board">
+        <canvas></canvas>
+      </section>
+    </div>
+    <script src="main.js"></script>
+  </body>
+</html>
